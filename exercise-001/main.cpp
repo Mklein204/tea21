@@ -27,13 +27,13 @@ auto main(int argc, char **argv) -> int
      * More info at https://fmt.dev/latest/api.html
      */
 
-    int bsp;
+    int stack;
     fmt::print("Value of variable foo {} address of variable foo {}\n",foo, fmt::ptr(&foo) );
     fmt::print("Value of variable bss_c {} address of variable bss_c {}\n",bss_c, fmt::ptr(&bss_c) );
     fmt::print("Value of variable data {} address of variable data {}\n",data, fmt::ptr(&data) );
     fmt::print("Value of variable data_new {} address of variable data_new {}\n",data_new, fmt::ptr(&data_new) );
     fmt::print("Value of variable rodata {} address of variable rodata {}\n",rodata, fmt::ptr(&rodata) );
     fmt::print("Value of variable rodata_new {} address of variable rodata_new {}\n",rodata_new, fmt::ptr(&rodata_new) );
-    fmt::print("Value of variable bsp {} address of variable bsp {}\n",bsp, fmt::ptr(&bsp) );
+    fmt::print("Value of variable stack {} address of variable stack {}\n",stack, fmt::ptr(&stack) );
     return 0; /* exit gracefully*/
 }
