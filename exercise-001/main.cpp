@@ -29,7 +29,7 @@ auto main(int argc, char **argv) -> int
 
     int bsp;
     fmt::print("Value of variable foo {} address of variable foo {}\n",foo, fmt::ptr(&foo) );
-    fmt::print("Value of variable bbs_c {} address of variable bss_c {}\n",bss_c, fmt::ptr(&bss_c) );
+    fmt::print("Value of variable bss_c {} address of variable bss_c {}\n",bss_c, fmt::ptr(&bss_c) );
     fmt::print("Value of variable data {} address of variable data {}\n",data, fmt::ptr(&data) );
     fmt::print("Value of variable data_new {} address of variable data_new {}\n",data_new, fmt::ptr(&data_new) );
     fmt::print("Value of variable rodata {} address of variable rodata {}\n",rodata, fmt::ptr(&rodata) );
