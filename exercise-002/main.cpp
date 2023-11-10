@@ -1,6 +1,7 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
 
+#include <chrono>
 #include "CLI/CLI.hpp"
 #include "config.h"
 
@@ -35,26 +36,23 @@ auto main(int argc, char **argv) -> int
 
     /* INSERT YOUR CODE HERE */
 
-    std::srand(std::time(nullptr));
-    int random_variable = std::rand();
+    //std::srand(std::time(nullptr));
+    //int random_variable = std::rand();
 
     for (int i=0; i < data.size(); i++)
     {
         data[i] = rand()%100;
     }
-    fmt::print("The vector:\n[{}]\n ",fmt::join(data, ", "));
-    
+    //fmt::print("The vector:\n[{}]\n ",fmt::join(data, ", "));
+
     auto start = std::chrono::system_clock::now();
     std::sort(data.begin(),data.end());
     auto end = std::chrono::system_clock::now;
+
+    //fmt::print("The vector:\n[{}]\n ",fmt::join(data, ", "));
     
     //auto elapsed = end - start;
     //auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-
-    //fmt::print("\nTime for sort: {}\n",elapsed);
-    //for (int i=0; i < count; i++)
-    //{
-    //    fmt::print("{} ",data[i]);
-    //}
+    //fmt::print("Time for sort:\n[{}]\n ",end);
     return 0; /* exit gracefully*/
 }
