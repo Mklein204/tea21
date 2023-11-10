@@ -25,7 +25,7 @@ auto main(int argc, char **argv) -> int
     }
     std::vector<int> data(count);
 
-    fmt::print("Created a vector with {} elements",count);
+    fmt::print("Created a vector with {} elements \n\n",count);
 
     /**
      * The {fmt} lib is a cross platform library for printing and formatting text
@@ -34,6 +34,19 @@ auto main(int argc, char **argv) -> int
      */
 
     /* INSERT YOUR CODE HERE */
+
+    for (int i=0; i < count; i++)
+    {
+        data[i] = rand()%100;
+        fmt::print(" {}",data[i]);
+    }
+
+    
+    auto start = std::chrono::system_clock::now();
+    //std::sort data(count);
+    auto end = std::chrono::system_clock::now;
+    //auto elapsed = end - start;
+    //auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
 
     return 0; /* exit gracefully*/
 }
