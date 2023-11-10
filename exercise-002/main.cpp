@@ -35,18 +35,26 @@ auto main(int argc, char **argv) -> int
 
     /* INSERT YOUR CODE HERE */
 
-    for (int i=0; i < count; i++)
+    std::srand(std::time(nullptr));
+    int random_variable = std::rand();
+
+    for (int i=0; i < data.size(); i++)
     {
         data[i] = rand()%100;
-        fmt::print(" {}",data[i]);
     }
-
+    fmt::print("The vector:\n[{}]\n ",fmt::join(data, ", "));
     
     auto start = std::chrono::system_clock::now();
-    //std::sort data(count);
+    std::sort(data.begin(),data.end());
     auto end = std::chrono::system_clock::now;
+    
     //auto elapsed = end - start;
     //auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
 
+    //fmt::print("\nTime for sort: {}\n",elapsed);
+    //for (int i=0; i < count; i++)
+    //{
+    //    fmt::print("{} ",data[i]);
+    //}
     return 0; /* exit gracefully*/
 }
