@@ -119,12 +119,12 @@ size_t LinkedList::size()
 
 void LinkedList::traverse(std::function<void(const std::string &)> func)
 {
-  traverse([&](LinkedListNode *node) { func(node->m_name); });
+  traverse([&](LinkedListNode *node) { func(node->m_name); });  // Lamda-Funktion --> Anonyme Funktion und kein Rückgabewert
 }
 
 void LinkedList::traverse(std::function<void(LinkedListNode *node)> func)
 {
   for (auto tmp = m_head; tmp != nullptr; tmp = tmp->pNext) {
     func(tmp);
-  }
+  }   // Wird über die Liste gegangen und die entsprechende Funktion aufgerufen
 }
