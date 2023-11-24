@@ -33,6 +33,8 @@ auto main(int argc, char **argv) -> int
     fmt::print("The filename to use: {}",filename);
 
     /* INSERT YOUR CODE HERE */
+    BMP bmp;
+    bmp.read(filename);
 
     return 0; /* exit gracefully*/
 }
