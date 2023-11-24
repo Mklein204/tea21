@@ -25,6 +25,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}/include") # add the output path
 
 # add the executable
 add_executable(${PROJECT_NAME} main.cpp)
+# add_executable(${PROJECT_NAME} bmp.cpp)
 
 # Add libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
