@@ -4,6 +4,11 @@
 #include "CLI/CLI.hpp"
 #include "config.h"
 
+class BMP {
+    bool read(const std::string& filename);
+    bool write(const std::string& filename);
+}
+
 auto main(int argc, char **argv) -> int
 {
     /**
