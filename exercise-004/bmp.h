@@ -10,6 +10,7 @@ public:
     ~BMP();
     bool read(const std::string&  filename);
     bool write(const std::string&  filename);
+    
 private:
     struct BitmapFileHeader {
         char bfType[2] = {'X','X'}; /*> The header field used to identify the BMP and DIB file is*/
